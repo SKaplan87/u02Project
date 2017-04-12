@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Home Page</title>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+      <div class="main-container">
+      <div class="border-container">
+
+        <br>
+        {{#logged_in}}
+          <nav>
+    <div class="nav-wrapper black">
+      <a href="#" class="brand-logo">Qwikist</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/clients">Clients</a></li>
+        <li><a href="/gyms">Gyms</a></li>
+        <li><a href="/sessions">Sessions</a></li>
+        <li><a href="/logout">Log Out</a></li>
+      </ul>
+    </div>
+  </nav>
+<h1>Welcome to your Trainer Portal!</h1>
+      <div class="row">
+      <a style="display:block" href="dashboard">
+        <div class="col s3">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://cdn0.iconfinder.com/data/icons/computer-networking/64/dashboard_icon_laptop_analysis_chart_graph_system_monitoring-256.png">
+            </div>
+            <div class="card-content" style="text-align:center;">
+              Dashboard
+            </div>
+          </div>
+        </div>
+        </a>
+        <a style="display:block" href="clients">
+        <div class="col s3">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://sites.psu.edu/siowfa16/files/2016/12/exercising-14ijlnd.jpg">
+            </div>
+            <div class="card-content" style="text-align:center;">
+              Clients
+            </div>
+          </div>
+        </div>
+        </a>
+        <a style="display:block" href="gyms">
+        <div class="col s3">
+          <div class="card">
+            <div class="card-image">
+              <img src="http://www.kaylainthecity.com/wp-content/uploads/gym.jpg">
+            </div>
+            <div class="card-content" style="text-align:center;">
+              Gyms
+            </div>
+          </div>
+        </div>
+        </a>
+        <a style="display:block" href="sessions">
+        <div class="col s3">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://healthsaveblog.com/wp-content/uploads/2017/03/Personal-Trainer.jpg">
+            </div>
+            <div class="card-content" style="text-align:center;">
+              Sessions
+            </div>
+          </div>
+        </div>
+        </a>
+      </div>
+
+
+
+
+
+
+
+        </div>
+        {{/logged_in}}
+        {{^logged_in}}
+        <div class="col-lg-6 center-block">
+          <div class="well bs-component">
+            <form class="form-horizontal" action="/login" method="post">
+              <fieldset>
+                <legend>Login</legend>
+                <div class="form-group">
+                  <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                  <div class="col-lg-10">
+                    <input name="email" type="text" class="form-control" id="inputEmail" placeholder="Email" value="scott@email.com"
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                  <div class="col-lg-10">
+                    <input name="password" type="password" class="form-control" id="inputPassword" placeholder="Password" value="password">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-lg-10 col-lg-offset-2">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <p>Not a member? <a href="/signup">Sign Up!</a></p>
+        </div>
+        {{/logged_in}}
+      </div>
+    </div>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="scripts/materialize.min.js"></script>
+</html>

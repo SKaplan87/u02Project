@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>DELETE {{name}}</title>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<br>
+  <nav>
+    <div class="nav-wrapper black">
+      <a href="#" class="brand-logo">Qwikist</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/clients">Clients</a></li>
+        <li><a href="/gyms">Gyms</a></li>
+        <li><a href="/sessions">Sessions</a></li>
+        <li><a href="/logout">Log Out</a></li>
+      </ul>
+    </div>
+  </nav>
+<h5> ARE YOU SURE YOU WANT TO DELETE THIS GYM?</h5>
+<a href="/gym/delete/yes/{{id}}">YES</a> <a href="/gyms">NO</a>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+</html>

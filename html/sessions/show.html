@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Session: {{id}}</title>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<br>
+  <nav>
+    <div class="nav-wrapper black">
+      <a href="#" class="brand-logo">Qwikist</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/clients">Clients</a></li>
+        <li><a href="/gyms">Gyms</a></li>
+        <li><a href="/sessions">Sessions</a></li>
+        <li><a href="/logout">Log Out</a></li>
+      </ul>
+    </div>
+  </nav>
+<h1>{{id}}</h1>
+<a href="/session/update/{{id}}"">UPDATE</a>
+<a href="/session/delete/{{id}}"">DELETE</a>
+<h2>{{client_name}}</h2>
+<h2>{{gym_name}}</h2>
+<h3>{{date_of_session}}</h3>
+<h3>{{time_of_session}}</h3>
+<h3>Gym Price: ${{price}}</h3>
+<h3>Charge to Client: ${{charge}}</h3>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+</html>
